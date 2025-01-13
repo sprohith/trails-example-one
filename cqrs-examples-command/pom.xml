@@ -1,0 +1,20 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.trials.cqrs</groupId>
+	<artifactId>cqrs-examples-models-command</artifactId>
+	<version>1.0</version>
+	<dependencies>
+		<dependency>
+			<groupId>com.trails.cqrs</groupId>
+			<artifactId>cqrs-base-models</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.trails.cqrs</groupId>
+			<artifactId>cqrs-base-events</artifactId>
+			<version>1.0</version>
+		</dependency>
+	</dependencies>
+</project>

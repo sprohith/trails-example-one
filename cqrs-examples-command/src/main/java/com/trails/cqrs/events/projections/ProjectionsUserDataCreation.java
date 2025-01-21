@@ -5,6 +5,7 @@ import com.trails.cqrs.events.commands.UserCreationEvent;
 import com.trails.cqrs.events.commands.UserDataCreationEvent;
 import com.trails.cqrs.models.commands.UserDataModel;
 import com.trails.cqrs.models.projections.ProjectionsUserDataModel;
+import com.trails.cqrs.projections.MasterProjections;
 
 public class ProjectionsUserDataCreation implements Projections<UserCreationEvent, UserDataCreationEvent> {
 

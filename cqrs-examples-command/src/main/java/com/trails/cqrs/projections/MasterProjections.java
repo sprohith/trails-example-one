@@ -1,4 +1,4 @@
-package com.trails.cqrs.events.projections;
+package com.trails.cqrs.projections;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -10,15 +10,16 @@ public class MasterProjections {
 	private final static Map<Class<?>, Set<Class<?>>> projections = new HashMap<>();
 
 	private static Set<Class<?>> safeGet(Class<?> key) {
-		
+
 		if (projections.containsKey(key)) {
 			return projections.get(key);
 		}
 
 		synchronized (MasterProjections.class) {
-			projections.put(key, new HashSet<>());
+			if (!projections.containsKey(key))
+				projections.put(key, new HashSet<>());
 		}
-		
+
 		return safeGet(key);
 	}
 
